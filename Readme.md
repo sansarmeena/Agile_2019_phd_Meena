@@ -4,4 +4,4 @@ Automated landslide detection using deep learning approach a case study of Kodag
 
 ![Geographic location of the study area with field photos of landslides occurences](kodagu_SA.png)
 
-Study area map with landslide locations.
+Study area map with landslide locations(A-D).
