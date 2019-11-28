@@ -5,18 +5,28 @@ date: "11/27/2019"
 output: html_document
 ---
 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## 1.	Introduction
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Beyond the direct hazards of earthquakes, the deposited mass of earthquake induced landslide (EQIL) in the riverbeds causing the river to thrust upward. The appeared lakes behind these dams usually lead to initiate catastrophic flash floods, which considered as a leading natural hazard in landslide hazard-prone regions worldwide specially the Himalayas. The EQIL inventories are generated mostly by traditional or semi-automatic supervised mapping approaches using remote sensing data including optical and topographical data. 
+In this study, we use the optical satellite data and deep-learning convolution neural networks (CNNs) to analyse the impact of topographic factors for EQIL detection. Thus, two training datasets were prepared and used to evaluate the performance of the CNN model using only optical data and using this data along with topographic factors across the west coast of the Trishuli River in Nepal.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## 3. Study area
+Study area is located in the Kodagu district which is located in the central-southern western Ghats, which is a very important ecological section with rich natural resources. The total area covered by district is around 4102 km² and around half million resides in the district. The elevation ranges from 900 meters to 1750 m above sea level, with an average rainfall of 4000 mm. The headquarter of the district is in Medikeri, which is one of the taluks. The district is rich in coffee cultivation and produces about one third of India’s coffee. In august 2018 due to heavy rainfall whole district was affected by natural hazards such as floods and landslides. the daily mean rainfall in August 2018 was 1217mm
 
-```{r cars}
-summary(cars)
+## 2. Data
+In this study we used rapideye satellite data. RapidEye is a constellation of Earth-observing (EO) satellites that provide sun synchronous imagery. The height of the orbit is 680 km, and the swath width is 77 km that have a revisit time of 5 days (Dash, Pearse, and Watt 2018). RapidEye imagery provides data in 5 broad bands (blue = 440–510 nm, green = 520–590 nm, red = 630–685 nm, red edge = 690–730, and near-infrared 760–850 nm) within a ground sampled pixel size of 5.0 m. RapidEye satellite images used in this study were acquired on the 28th of November 2015.We downloaded the rapideye data from planetlabs (Planet Team, 2019).
+
+## 3. Methodology
+Deep learning (DL) is considered as a subset of ML, including techniques mimics how our brain works. DL are large size neural networks with several hidden layers that require a considerable amount of data to train, so to get better performance (Guirado et al. 2017).We use a type of DL in this study called convolutional neural networks (CNN). One of the advantages of using the CNN model is that it can learn useful feature representations of an image with no need to design low-level ones manually. However, this matter makes it hard to explain what it exactly learns (K. Lu 2018). The CNN model has a specific architecture and contains convolutional and pooling layers, whereby the convolutional layer is the primary building block of any CNN model. In any neural network, all neurons existing in the layer n are acting as inputs to layer n+1 neurons. While, in a CNN model, the neurons of layer (n +1) are not fully connected to all neurons of layer n but only connected to a corresponding subset of them which called receptive field. In our case, the first convolution layer was used with a kernel size of five and continued with three convolution layers with a kernel size of three.The pooling layer is used to down/sub-sample output of the convolutional layer to produce a concise set of feature maps. The pooling layer reduces the spatial size of feature maps that lead to a reduction of the computation volume for the reminder layers. In the CNN model of this study, three max-pooling layers of 2 × 2 were applied.
+Our CNN model was fed once with a five-layer training dataset including the optical data of spectral bands and the NDVI (we call it CNN RGBI,N). Then we added topographic factor layer slope,  to the previous dataset, to train our CNN_RGBI,N,S model. In this case, the CNN_RBGI,N,S model was fed by the spectral bands along with the topographic factor layers.
+
+
+
 ```
 
 ## Including Plots
