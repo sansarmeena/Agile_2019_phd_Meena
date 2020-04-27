@@ -1,8 +1,15 @@
 ---
-title: "AGILE phd school 2019"
-author: "Sansar Raj Meena"
-date: "11/28/2019"
-output: html_document
+title: "Automated landslide detection using deep learning approach a case study of Kodagu, Western Ghats"
+author:
+  - name: Sansar Raj Meena
+    affiliation: University of Salzburg, Austria
+    email: sansar.meena@stud.sbg.ac.at
+    orcid: 0000-0000-0000-0000
+abstract: |
+   The detected landslide polygon information can be used for disaster planning, mitigation measures for the affected areas. They will gain knowledge about landslides information in the affected areas, and about the methodology.
+output:
+  ceurticles::twocolpceurws_article
+bibliography: samplebib.bib
 ---
 
 Automated landslide detection using deep learning approach a case study of Kodagu, Western Ghats.
