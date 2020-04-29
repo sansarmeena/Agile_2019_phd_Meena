@@ -4,7 +4,7 @@ author:
   - name: Sansar Raj Meena
     affiliation: University of Salzburg, Austria
     email: sansar.meena@stud.sbg.ac.at
-    orcid: 0000-0000-0000-0000
+    orcid: 0000-0001-6175-6491
 abstract: |
    The detected landslide polygon information can be used for disaster planning, mitigation measures for the affected areas. They will gain knowledge about landslides information in the affected areas, and about the methodology.
 output:
