@@ -1,5 +1,5 @@
 ---
-title: "Automated landslide detection using deep learning approach a case study of Kodagu, Western Ghats"
+title: "Automated landslide detection using deep learning approach a case study of Kodagu district, Western Ghats"
 author:
   - name: Sansar Raj Meena
     affiliation: University of Salzburg, Austria
